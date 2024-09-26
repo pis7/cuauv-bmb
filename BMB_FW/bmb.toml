@@ -1,0 +1,62 @@
+# The device name that is exposed to serial
+name = "PODA"
+
+# Variables that are written to by the computer
+[writeVars.vars]
+
+mac_command = "uint8"
+do_mac_command = "uint8"
+
+# Specify how often the variables should be updated (in milliseconds)
+# ~10 for more critical values like depth, IMU data, etc. ~100 for everything else
+[readGroups.low_priority]
+interval_ms = 100
+
+# Variables that the computer reads from the device
+[readGroups.low_priority.vars]
+
+a_tos_voltage_V = "float"
+a_current_A = "float"
+a_rem_cap_pct = "uint16"
+a_rem_cap_mAh = "uint16"
+a_batt_temp_C = "float"
+a_fet_temp_C = "float"
+a_time_to_full_mins = "uint16"
+a_time_to_empty_mins = "uint16"
+a_safety_status_high_BM = "uint16"
+a_safety_status_low_BM = "uint16"
+a_terminate_charge_alarm = "uint8"
+a_terminate_discharge_alarm = "uint8"
+a_remaining_capacity_alarm = "uint8"
+a_remaining_time_alarm = "uint8"
+cell_1_voltage_V = "float"
+cell_2_voltage_V = "float"
+cell_3_voltage_V = "float"
+cell_4_voltage_V = "float"
+batt_plus_voltage_V = "float"
+pack_plus_voltage_V = "float"
+full_chg_cap_mAh = "uint16"
+cell1_temp_C = "float"
+cell2_temp_C = "float"
+cell3_temp_C = "float"
+cell4_temp_C = "float"
+is_charging = "uint8"
+fully_charged = "uint8"
+fully_discharged = "uint8"
+soh_pct = "uint16"
+op_status_high_BM = "uint16"
+op_status_low_BM = "uint16"
+pf_status_high_BM = "uint16"
+pf_status_low_BM = "uint16"
+batt_status_BM = "uint16"
+chg_fet_on = "uint8"
+dsg_fet_on = "uint8"
+sys_pres = "uint8"
+cell_balancing_en = "uint8"
+
+#You can also give variables default values:
+
+[writeVars.defaults]
+
+mac_command = 0
+do_mac_command = 0

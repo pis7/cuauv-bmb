@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "cuauv")(type "KiCad")(uri "${BOARDS}/sirius/kicad/cuauv.kicad_sym")(options "")(descr ""))
+)
